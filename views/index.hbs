@@ -1,0 +1,15 @@
+<div class="row ">
+    {{#each products}}
+    <div class="col-md-3">
+        <div class="card mt-5" style="width: 18rem;border:2px solid">
+            <img class="card-img-top" src={{this.image}} alt="loading..." style="height: 12rem;">
+            <div class="card-body bg-dark text-white " style="background-color:;">
+                <h5 class="card-title text-center border-bottom  ">NAME:{{this.name}}</h5>
+                <p class="card-text">PRICE:{{this.price}}</p>
+                <p class="card-text">DESCRIPTION:{{this.description}}</p>
+                <a href="#" class="btn btn-primary ">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

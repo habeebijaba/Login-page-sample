@@ -1,0 +1,18 @@
+#formbutton {
+    float: right;
+    width: 10rem;
+}
+
+#colomn {
+    background-color: rgb(7, 205, 254);
+    border-radius: 2rem;
+}
+
+#row {
+    background-image: url('https://stat.overdrive.in/wp-content/uploads/2021/07/2021-Harley-Davidson-Sportster-S_5-900x506.jpg');
+}
+
+#signupcolomn {
+    background-color: rgb(7, 205, 254);
+    border-radius: 2rem;
+}
