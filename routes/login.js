@@ -4,10 +4,16 @@ var signup = require('../helpers/signup')
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  req.session.destroy(() => {
+  
+    let isLoggedIn=req.session.user
+    if(isLoggedIn){
+      res.redirect('/')
+    }else{
+
     res.render('login', {})
-  })
-});
+  }
+  
+})
 router.post('/', (req, res, next) => {
 
   signup.login(req.body).then((response) => {
@@ -19,14 +25,20 @@ router.post('/', (req, res, next) => {
       res.redirect('/login')
     }
   })
-  // router.get('/login', (req, res) => {
-  //   console.log("haii");
+  
+    
+  })
 
-  //   req.session.destroy()
-  //   res.redirect('/login')
-  // })
+  // reviewer edit
 
-})
+  router.get('/logout', (req, res) => {
+
+    req.session.destroy(()=>{
+      res.redirect('/login')
+      
+
+    })
+  })
 
 
 
